@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SAMSUNG OFFICIAL STORE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Gaya kustom sederhana untuk tampilan */
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div data-role="page" id="gallery-page">
+    
+    <div data-role="header" data-theme="b">
+        <h1>Smart Gadget Gallery</h1>
+    </div>
+    
+    <div role="main" class="ui-content">
+        <div class="container">
+            <h3 class="mb-4">Collections</h3>
+            <div id="product-list" class="row">
+                </div>
+        </div>
+    </div>
+    
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#gallery-page" class="ui-btn-active ui-state-persist" data-transition="slide">Gallery</a></li>
+                <li><a href="#about-page" data-transition="slidefade">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="about-page">
+    
+    <div data-role="header" data-theme="b">
+        <a href="#gallery-page" data-icon="back" data-direction="reverse">Back</a>
+        <h1>About This App</h1>
+    </div>
+    
+    <div role="main" class="ui-content">
+        <h3>About</h3>
+        <p>This one-page gadget gallery application was developed as part of a practical assignment.</p>
+        
+        <h4>Teknologi yang Digunakan:</h4>
+        <ul>
+            <li><strong>HTML5</strong> dan <strong>JavaScript</strong></li>
+            <li><strong>Bootstrap 5</strong> (untuk styling dan modal)</li>
+            <li><strong>jQuery Mobile 1.4.5</strong> (untuk struktur halaman dan transisi)</li>
+        </ul>
+        
+        <h4>Developer Info:</h4>
+        <p>Nama: [Nama Anda]<br>
+        Mata Kuliah: [Nama Mata Kuliah]</p>
+    </div>
+    
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#gallery-page" data-transition="slide">Gallery</a></li>
+                <li><a href="#about-page" class="ui-btn-active ui-state-persist" data-transition="slidefade">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-image-container" class="text-center mb-3"></div>
+                <p><strong>Harga:</strong> <span id="modal-price"></span></p>
+                <p><strong>Deskripsi:</strong> <span id="modal-description"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
